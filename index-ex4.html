@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex 4</title>
+</head>
+<body>
+    <script>
+        let preco = Number(prompt("informe o valor do produto"))
+        alert("1- à vista dinheiro/cheque-> 10% desconto< 2- á vista cartão crédito -> 5% de desconto 3- duas vezes -> preço inicial sem juros 4- três vezes -> preço inicial + 10% de juros")
+        let cod = prompt("informe o código de como deseja efetuar o pagamento")
+
+    if (cod == "1"){
+        let valor =preco - ((10/100)*preco)
+        document.write("você pagará ", valor)
+    }else if(cod == "2"){
+        let valor = preco - ((5/100)*preco)
+        document.write("você pagará ", valor)
+    }else if(cod == "3"){
+        document.write("você pagará ", preco)
+    }else if(cod == "4"){
+        let valor = preco + ((10/100)*preco)
+        document.write("você pagará ", valor)
+    }
+    </script>
+</body>
+</html>

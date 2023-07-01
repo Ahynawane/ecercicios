@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex 2</title>
+</head>
+
+<body>
+    <script>
+        let conta = 0
+        let jogo = true
+       
+        while (jogo == true) {
+            let escolha = prompt("você escolhe cara, coroa ou sair?")
+            if (escolha == "sair") {
+                alert("você saiu do jogo")
+                jogo = false
+            } else if (escolha == "cara" || escolha == "coroa") {
+                let moeda = Math.random()
+                if (moeda > 0.5) {
+                    moeda = "cara"
+                } else {
+                    moeda = "coroa"
+                }
+                alert("a moeda caiu em " + moeda)
+                if (moeda == escolha) {
+                    alert("você ganhou")
+                    conta++
+                } else {
+                    alert("você perdeu")
+                    conta--
+                }
+                alert("sua pontuação é " + conta)
+            }
+        }
+
+
+        /*let ponto = 0
+       let playing = true
+
+while (playing == true) {
+    let escolha = prompt("você escolhe cara, coroa ou quer sair do jogo?")
+
+  
+  if (escolha == "sair") {
+   let alert = ("Você saiu do jogo.")
+    playing = false;
+  } else if (escolha == "cara" || escolha == "coroa") {
+    let moeda = Math.random() 
+    if (moeda <  0.5) {
+        moeda = "cara"
+    } else{
+        moeda = "coroa"
+    }
+    let res = alert("A moeda caiu em: " + moeda)
+    
+    if (moeda == escolha) {
+      alert("Parabéns! Você ganhou!" );
+      pontos++;
+    } else {
+      alert("Você perdeu. Tente novamente." );
+      pontos--;
+    }
+
+    alert("Pontuação atual: " + pontos) ;
+  } else {
+    alert("Opção inválida. Tente novamente." );
+  }
+}*/
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex 5</title>
+</head>
+<body>
+    <script>
+        let num1 = Number(prompt("informe o primeiro número"))
+        let num2 = Number(prompt("informe o segundo número"))
+        let escolha = prompt("qual operação deseja realizar? (+, -, * ou /)")
+
+        if(escolha == "+"){
+            document.write(`o resultado da soma é ${num1 + num2}`)
+        }else if (escolha == "-"){
+            document.write(`o resultado da subtração é ${num1 - num2}`)
+        }else if (escolha == "*"){
+            document.write(`o resultado da multiplicação é ${num1 * num2}`)
+        }else if (escolha == "/"){
+            document.write(`o resultado da divisão é ${num1 / num2}`)
+        }
+    </script>
+</body>
+</html>
