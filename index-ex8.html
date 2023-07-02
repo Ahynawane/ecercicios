@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex 8</title>
+</head>
+<body>
+    <script>
+function verificarLimiteCredito(numeroConta, saldoInicial, totalCobrado, totalCreditos, limiteCredito) {
+  const novoSaldo = saldoInicial + totalCobrado - totalCreditos;
+  document.write(`Número da conta: ${numeroConta}<br>`);
+  document.write(`Novo saldo: ${novoSaldo}<br>`);
+
+  if (novoSaldo > limiteCredito) {
+    document.write("Limite de crédito excedido<br>");
+  }
+}
+
+const numeroConta = parseInt(prompt("Informe o número da conta:"));
+const saldoInicial = parseInt(prompt("Informe o saldo inicial do mês:"));
+const totalCobrado = parseInt(prompt("Informe o total cobrado no mês:"));
+const totalCreditos = parseInt(prompt("Informe o total de créditos aplicados no mês:"));
+const limiteCredito = parseInt(prompt("Informe o limite de crédito autorizado:"));
+
+verificarLimiteCredito(numeroConta, saldoInicial, totalCobrado, totalCreditos, limiteCredito);
+
+    </script>
+</body>
+</html>

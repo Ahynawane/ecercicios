@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ex 7</title>
+</head>
+
+<body>
+    <script>
+        let totalkm = 0;
+        let totallitro = 0;
+        let viagens = 0;
+
+        while (true) {
+            const km = parseInt(prompt("Informe os quilômetros dirigidos na viagem (ou digite '0' para encerrar):"));
+            if (km == "0") {
+                break;
+            }
+
+            const litros= parseInt(prompt("Informe os litros de gasolina consumidos na viagem:"));
+
+            const consumo = km / litros;
+            totalkm += km;
+            totallitro += litros;
+            viagens++;
+
+            document.write(`Consumo na viagem ${viagens}: ${consumo.toFixed(2)} km/l<br>`);
+        }
+
+        const mediaconsumo = totalkm / totallitro;
+        const mediakm = totalkm / viagens;
+        const medialitro = totallitro / viagens;
+
+        document.write(`Quilometragem total: ${totalkm} km <br>`);
+        document.write(`Litros totais: ${totallitro} l<br>`);
+        document.write(`Consumo médio: ${mediaconsumo.toFixed(2)} km/l<br>`);
+        document.write(`Média de quilometragem por viagem: ${mediakm.toFixed(2)} km<br>`);
+        document.write(`Média de litros por viagem: ${medialitro.toFixed(2)} l<br>`);
+
+    </script>
+</body>
+
+</html>
